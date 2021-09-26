@@ -1,0 +1,27 @@
+-package
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/device/walkerNews.bar
+-barVersion
+1.5
+-C
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src
+bar-descriptor.xml
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/config.xml
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/cordova.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/cordova_plugins.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/default-icon.png
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/index.html
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/wwe
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/frameworkModules.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/index.html
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/require.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/ui.html
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/lib/exception.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/lib/utils.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/css/bbui.css
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/css/index.css
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/css/style.css
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/img/logo.png
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/index.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/lib/bbui.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/lib/jquery-1.9.1.min.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/plugins/jnext/auth.txt

@@ -1,0 +1,22 @@
+<widget id="news-walker" 
+  xmlns="http://www.w3.org/ns/widgets" 
+  xmlns:cdv="http://cordova.apache.org/ns/1.0" version="0.0.1">
+  <name>news-walker</name>
+  <rim:permissions>
+    <rim:permit>read_device_identifying_information</rim:permit>
+    <rim:permit>access_location_services</rim:permit>
+    <rim:permit>access_shared</rim:permit>
+    <rim:permit>run_when_backgrounded</rim:permit>
+    <rim:permit>bbm_connect</rim:permit>
+    <rim:permit>access_pimdomain_messages</rim:permit>
+  </rim:permissions>
+  <author email="qianzhongjie1025@gmail.com" href="http://github.com/qianzhongjie">Walker</author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+  <preference name="WebSecurity" value="enable"/>
+  <preference name="DiskCache" value="enable"/>
+  <preference name="PopupBlocker" value="enable"/>
+  <preference name="SpatialNavigation" value="true"/>
+  <description>这个是一个新闻资讯app，让你随时随地得到最新消息！</description>
+</widget>
