@@ -8,7 +8,6 @@ bar-descriptor.xml
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/config.xml
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/cordova.js
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/cordova_plugins.js
-/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/default-icon.png
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/index.html
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/wwe
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/chrome/frameworkModules.js
@@ -20,8 +19,14 @@ bar-descriptor.xml
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/css/bbui.css
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/css/index.css
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/css/style.css
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/img/bg.jpg
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/img/logo.png
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/img/news_bg.jpeg
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/index.js
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/lib/bbui.js
-/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/lib/jquery-1.9.1.min.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/js/lib/jquery.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/plugins/com.blackberry.push/www/client.js
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/plugins/com.blackberry.ui.toast/www/client.js
 /home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/plugins/jnext/auth.txt
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/plugins/jnext/libpushjnext.so
+/home/walker/WebWorks Projects/news-walker/platforms/blackberry10/build/src/plugins/jnext/libutils.so

@@ -17,33 +17,47 @@
  * under the License.
  */
 var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
+    initialize: function () {
+        // app.showtoast('start', function () { });
+        $.ajax({
+            type: 'POST',
+            url: 'http://c.3g.163.com/nc/article/list/T1467284926140/0-20.html',//'http://47.98.203.177:809/api/news/getlist',
+            dataType: 'JSON',
+            // data: datas,
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36");
+            },
+            success: function (data) {
+                // app.showtoast(typeof(data), function () { });
+                app.pushhtml(data);
+            },
+            error: function (data) {
+                app.showtoast('Error updating status: ' + data.responseText, function () { });
+            }
+        });
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        // var parentElement = document.getElementById(id);
-        // var listeningElement = parentElement.querySelector('.listening');
-        // var receivedElement = parentElement.querySelector('.received');
 
-        // listeningElement.setAttribute('style', 'display:none;');
-        // receivedElement.setAttribute('style', 'display:block;');
+    pushhtml: function (newsdata) {
+        try {
+            for (var i = 0; i < newsdata['T1467284926140'].length; i++) {
+                var obj = newsdata['T1467284926140'][i];
+                var str = '<li><a href="'+ obj['url'] + '"><img src="'+ obj['imgsrc'] + '" alt="" width="100%" /><br><span><h5><b>'+ obj['title'] + '</b></h5></span> </a></li><br>';
+                $("#newlist").append(str);
+            };
+            app.showtoast('数据加载完成', function () { });
+        } catch (err) {
+            app.showtoast(err, function () { });
+        }
+    },
 
-        console.log('Received Event: ' + id);
+    showtoast: function (msg, callback) {
+        var options = {
+            buttonText: '确定',
+            dismissCallback: callback,
+            //buttonCallback : goToMainScreen,
+            timeout: 4000
+        };
+        blackberry.ui.toast.show(msg, options);
     }
 };
+

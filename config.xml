@@ -1,7 +1,9 @@
 <widget id="news-walker" 
-  xmlns="http://www.w3.org/ns/widgets" 
-  xmlns:cdv="http://cordova.apache.org/ns/1.0" version="0.0.1">
-  <name>news-walker</name>
+  xmlns:cdv="http://cordova.apache.org/ns/1.0" version="0.0.1" 
+  xmlns="http://www.w3.org/ns/widgets">
+  <name>walkerNews</name>
+  <icon src="img/logo.png"/>
+  <rim:splash src="img/bg.jpg"/>
   <rim:permissions>
     <rim:permit>read_device_identifying_information</rim:permit>
     <rim:permit>access_location_services</rim:permit>
@@ -13,6 +15,8 @@
   <author email="qianzhongjie1025@gmail.com" href="http://github.com/qianzhongjie">Walker</author>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="http://c.3g.163.com" subdomains="true" />
+  <preference name="websecurity" value="disable" />
   <preference name="HideKeyboardFormAccessoryBar" value="true"/>
   <preference name="WebSecurity" value="enable"/>
   <preference name="DiskCache" value="enable"/>
