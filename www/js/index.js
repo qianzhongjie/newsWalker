@@ -18,16 +18,17 @@
  */
 //$('.show_more_arrow').click()
 var app = {
+    //初始化
     initialize: function () {
         // app.showtoast('start', function () { });
         $.ajax({
             type: 'POST',
-            url: 'http://c.3g.163.com/nc/article/list/T1467284926140/0-20.html',//'http://47.98.203.177:809/api/news/getlist',
+            url: 'http://47.98.203.177:809/api/news/getlist',//'http://c.3g.163.com/nc/article/list/T1467284926140/0-20.html',//'
             dataType: 'JSON',
             // data: datas,
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36");
-            },
+            // beforeSend: function(xhr) {
+            //     xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36");
+            // },
             success: function (data) {
                 // app.showtoast(typeof(data), function () { });
                 app.pushhtml(data);
@@ -38,11 +39,14 @@ var app = {
         });
     },
 
+    //push新闻列表
     pushhtml: function (newsdata) {
         try {
             for (var i = 0; i < newsdata['T1467284926140'].length; i++) {
                 var obj = newsdata['T1467284926140'][i];
-                var str = '<li><a href="'+ obj['url'] + '"><img src="'+ obj['imgsrc'] + '" alt="" width="100%" /><br><span><h5><b>'+ obj['title'] + '</b></h5></span> </a></li><br>';
+                
+                var infourl = 'https://3g.163.com/news/article/' + obj['postid'] + '.html';
+                var str = '<li><a href="./info.html?id='+ obj['postid'] +'" ><img src="' + obj['imgsrc'] + '" alt="" width="100%" /><br><span><h5><b>' + obj['title'] + '</b></h5></span> </a></li><br>';
                 $("#newlist").append(str);
             };
             app.showtoast('数据加载完成', function () { });
@@ -50,7 +54,23 @@ var app = {
             app.showtoast(err, function () { });
         }
     },
+    //加载详情
+    showDetail:function(url){
+        console.log(url);
+        
+        $('#newinfo').attr('height',document.body.clientHeight+"px");
 
+        $('#newinfo').attr('width',document.body.clientWidth+"px");
+        $('#newinfo').attr('src',url);
+        $('#newinfo').css('display','block');
+        $('.app').css('display','none');
+        setTimeout(function(){
+            $('.footer').click();
+        },5000);
+
+
+    },
+    //弹窗
     showtoast: function (msg, callback) {
         var options = {
             buttonText: '确定',
@@ -58,7 +78,7 @@ var app = {
             //buttonCallback : goToMainScreen,
             timeout: 4000
         };
-        blackberry.ui.toast.show(msg, options);
+        //blackberry.ui.toast.show(msg, options);
     }
 };
 
