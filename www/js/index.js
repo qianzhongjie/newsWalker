@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+//$('.show_more_arrow').click()
 var app = {
     initialize: function () {
         // app.showtoast('start', function () { });
